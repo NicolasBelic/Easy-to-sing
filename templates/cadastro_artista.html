@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="icon" type="image/png" href="/static/img/logo-removebg-preview.png">
+
+
+</head>
+<body>
+    <div class="artista_log" id="form">
+        <form action="cadastrar_artista" method="post">
+            <label>Nome</label>
+            <input type="text" name="nome">
+            <br>
+            <label>Sexo</label>
+            <br>
+            <select class="form-select" enabled style="color:black" name="sexo">
+                <option value="1">Masculino</option>
+                <option value="2">Feminino</option>
+              </select>
+            <label>Telefone</label>
+            <input type="text" name="telefone">
+            <br>
+            <label>CPF</label>
+            <input type="text" name="cpf">
+            <br>
+            <label>CEP</label>
+            <input type="text" name="cep">
+            <br>
+            <label>Email</label>
+            <input type="text" name="email">
+            <br>
+            <label>Senha</label>
+            <input type="password" name="senha">
+            <button>Cadastrar</button>
+        </div>
+    </form>
+
+
+ 
+
+    <script src="https://kit.fontawesome.com/d47de159c9.js" crossorigin="anonymous"></script>
+</body>
+</html>

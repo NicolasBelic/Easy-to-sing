@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/static/css/perfil.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="/static/img/logo-removebg-preview.png">
+
+    <title>Perfil</title>
+</head>
+<nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/static/img/logo-removebg-preview.png" a href="home">
+                </span>
+
+                <form action="home">
+                <div class="text logo-text">
+                        <span class="text nav-text"><button class="btn" and style="background-color:transparent">home</button></span>
+                        <span class="profession">Artista</span>
+                    </form>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Pesquisa">
+                </li>
+
+                <ul class="menu-links">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="Perfil">
+                                <i class='bx bx-user icon' ></i>
+                                <span class="text nav-text">Perfil</span>
+                            </a>
+                        </li>
+
+                    <li class="nav-link">
+                        <a href="/templates/perfil.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notificações</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Chat">
+                            <i class='bx bx-chat icon'></i>
+                            <span class="text nav-text">Chat</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="logout">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <section class="home">
+        <div class="text" style="color: white">Perfil</div>
+    </section>
+
+    <section class="home">
+        <div class="text" style="color: white">Perfil</div>
+            <div class="container">
+                <div class="card">
+        
+                     <!----------- foto perfil --------->
+                <div class="foto_perfil">
+                <label class="picture" for="picture__input" tabIndex="0">
+                    <span class="picture__image"></span>
+                  </label>
+                  
+                  
+                  <img src="/static/img/foto7.jpeg" id="picture_input" class="profile-img">
+
+                   </div>
+                   <div class="chat_perfil">
+                    <button>chat</button>
+                    </div>
+                    <br>
+                    <br>
+                    <ul class="avaliacao">
+                        <li class="star-icon ativo" data-avaliacao="1"></li>
+                        <li class="star-icon" data-avaliacao="2"></li>
+                        <li class="star-icon" data-avaliacao="3"></li>
+                        <li class="star-icon" data-avaliacao="4"></li>
+                        <li class="star-icon" data-avaliacao="5"></li>
+                      </ul>
+                    <br>
+                    <br>
+                    <br>
+
+
+
+
+
+
+                    <div class="container-text">
+                        <h1 class="name">
+                            Nome do Artista
+                        </h1>
+        
+                        <h3 class="desc">
+                            descrição do artistas <br>
+                            Anos de Experiência <br><br>
+        
+                            <img src="/static/img/localização  png.png" alt="endereço" class="address-icon"> Santana de Parnaíba, São Paulo - ZO
+                        </h3>
+                    <main>
+                        <div class="header_perfil">
+                            <h1>Demonstrações</h1>
+                        </div>    
+                        <div class="gallery-container">
+                            <a href="/static/img/foto5.jpeg" class="gallery-items">
+                                <img src="/static/img/foto5.jpeg" alt="Chick Hicks">
+                            </a>
+                            <a href="/static/img/foto2.jpeg" class="gallery-items">
+                                <img src="/static/img/foto2.jpeg" alt="Doctor Hudson">
+                            </a>
+                            <a href="/static/img/foto4.jpeg" class="gallery-items">
+                                <img src="/static/img/foto4.jpeg" alt="Fillmore">
+                            </a>
+                            <a href="/static/img/foto6.jpeg" class="gallery-items">
+                                <img src="/static/img/foto6.jpeg" alt="Flo">
+                            </a>
+                        </div>        
+                    </main>
+                                        </div>
+
+    
+    <script>
+        <!------------------------###seta mexer ----------------------->
+const productContainers = [...document.querySelectorAll('.product-container')];
+ const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+ const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+ productContainers.forEach((item, i)=>{
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', ()=>{
+        item.scrollLeft += containerWidth
+    })
+
+    preBtn[i].addEventListener('click', ()=>{
+        item.scrollLeft -= containerWidth
+    })
+ })
+
+ var stars = document.querySelectorAll('.star-icon');
+                  
+                  document.addEventListener('click', function(e){
+                    var classStar = e.target.classList;
+                    if(!classStar.contains('ativo')){
+                      stars.forEach(function(star){
+                        star.classList.remove('ativo');
+                      });
+                      classStar.add('ativo');
+                      console.log(e.target.getAttribute('data-avaliacao'));
+                    
+
+
+
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+
+    </script>
+<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+
+</body>
+</html>

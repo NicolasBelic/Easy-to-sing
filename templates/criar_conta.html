@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY TO SING</title>
+
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/criar_conta.css')}}">
+    <link rel="icon" type="image/png" href="/static/img/logo-removebg-preview.png">
+
+</head>
+<body>
+    <main class="cards">
+            <section class="card contact">
+                <div class="icon">
+                    <img src="/static/css/artistalogo.png" alt="Contact us.">
+                </div>
+    <form action="cadastro_artista">
+            
+                <h3>Conta para artistas informais</h3>
+                <span>artista/banda</span>
+                <br>
+                <br>
+
+                <button>Artista</button>
+            </section>
+    </form>        
+
+
+        <section class="card shop">
+            <div class="icon">
+                <img src="/static/css/restlogo.png" alt="Shop here.">
+            </div>
+        <form action="cadastro_restaurante">
+            <h3>Cadastre seu estabelecimento</h3>
+            <span>Restaurante,bar,evento e etc...</span>
+            <br>
+            <br>
+
+            <button>Estabelecimento</button>
+        </form>
+        </section>
+        <section class="card about">
+            <div class="icon">
+                <img src="/static/css/pessoa_logo.png" alt="About us.">
+            </div>
+            <h3>Normal</h3>
+            <span>Conta para quem deseja contratar artistas sem ter estabelecimento</span>
+        
+            <button>Normal</button>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/d47de159c9.js" crossorigin="anonymous"></script>
+    <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/css/script.js"></script>
+</body>
+</html>
