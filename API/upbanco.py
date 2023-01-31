@@ -1,8 +1,9 @@
 import mysql.connector
 import requests
+import cep
 
 # Faz uma requisição para a API e obtém os dados do endereço
-cep = '32657180'
+cep = cep.cep
 response = requests.get(f'https://viacep.com.br/ws/{cep}/json/')
 dados_endereco = response.json()
 
