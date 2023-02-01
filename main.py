@@ -49,7 +49,7 @@ def salva_login_artista():
     localidade = data['localidade']
     uf = data['uf']
 
-    dao.insere_login_artista(nome, sexo, telefone, cpf, cep, email, senha, logradouro, bairro, localidade, uf) 
+    dao.usuario.insere_login_artista(nome, sexo, telefone, cpf, cep, email, senha, logradouro, bairro, localidade, uf) 
     return render_template('easy_to_sing.html')
 
 
