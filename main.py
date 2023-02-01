@@ -12,7 +12,7 @@ def login():
 def realiza_login():
     email=request.form['email']
     senha=request.form['senha']
-    dados=dao.usuario.realiza_login(email,senha)
+    dados=dao.realiza_login(email,senha)
 
 
     if len(dados)>0:
@@ -39,7 +39,18 @@ def salva_login_artista():
     email=request.form['email']
     senha=request.form['senha']
 
-    dao.usuario.insere_login_artista(nome,sexo,telefone,cpf,cep,email,senha) 
+    
+    import requests
+
+    response = requests.get(f'https://viacep.com.br/ws/{cep}/json/')
+
+    data = response.json()
+    logradouro = data['logradouro']
+    bairro = data['bairro']
+    localidade = data['localidade']
+    uf = data['uf']
+
+    dao.insere_login_artista(nome, sexo, telefone, cpf, cep, email, senha, logradouro, bairro, localidade, uf) 
     return render_template('easy_to_sing.html')
 
 @app.route('/cadastro_restaurante')
@@ -55,20 +66,12 @@ def salva_login_restaurante():
     email=request.form['email']
     senha=request.form['senha']
 
-    dao.usuario.insere_login_restaurante(nome,telefone,cnpj,cep,email,senha) 
+    dao.insere_login_restaurante(nome,telefone,cnpj,cep,email,senha) 
     return render_template('easy_to_sing.html')            
 
 @app.route('/Perfil')
 def abre_perfil():
-    return render_template('meuperfil.html')
-
-@app.route("/postar_foto", methods=['POST'])
-def postar_foto_perfil():
-    arquivo=request.form['arquivo']
-
-    dao.Upload.fotos(arquivo())
-    return render_template('meuperfil.html')    
-
+    return render_template('perfil.html')
 
 @app.route('/logout')
 def logout():
