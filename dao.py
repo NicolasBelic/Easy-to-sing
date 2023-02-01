@@ -30,3 +30,10 @@ def insere_login_restaurante(nome,telefone,cnpj,cep,email,senha):
     cursor=conexao.cursor()
     cursor.execute(sql_insert,valores)
     conexao.commit()
+    
+   class Criptografia:
+    def criptografia(self, texto):
+            salt = bcrypt.gensalt()
+            hash_valor = bcrypt.hashpw(texto.encode('utf-8'),salt)
+            return hash_valor
+
