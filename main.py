@@ -39,7 +39,18 @@ def salva_login_artista():
     email=request.form['email']
     senha=request.form['senha']
 
-    dao.insere_login_artista(nome,sexo,telefone,cpf,cep,email,senha) 
+    
+    import requests
+
+    response = requests.get(f'https://viacep.com.br/ws/{cep}/json/')
+
+    data = response.json()
+    logradouro = data['logradouro']
+    bairro = data['bairro']
+    localidade = data['localidade']
+    uf = data['uf']
+
+    dao.insere_login_artista(nome, sexo, telefone, cpf, cep, email, senha, logradouro, bairro, localidade, uf) 
     return render_template('easy_to_sing.html')
 
 @app.route('/cadastro_restaurante')
