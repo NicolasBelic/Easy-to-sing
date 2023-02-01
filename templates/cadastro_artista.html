@@ -18,31 +18,33 @@
     <div class="artista_log" id="form">
         <form action="cadastrar_artista" method="post">
             <label>Nome</label>
-            <input type="text" name="nome">
+            <input type="text" name="nome" required>
             <br>
             <label>Sexo</label>
             <br>
-            <select class="form-select" enabled style="color:black" name="sexo">
+            <select class="form-select" enabled style="color:black" name="sexo" required>
+                <option value="">Selecione</option>
                 <option value="1">Masculino</option>
                 <option value="2">Feminino</option>
               </select>
             <label>Telefone</label>
-            <input type="text" name="telefone">
+            <input type="text" name="telefone" required>
             <br>
             <label>CPF</label>
-            <input type="text" name="cpf">
+            <input type="text" name="cpf" required>
             <br>
             <label>CEP</label>
-            <input type="text" name="cep">
+            <input type="text" name="cep" required>
             <br>
             <label>Email</label>
-            <input type="text" name="email">
+            <input type="text" name="email" required>
             <br>
             <label>Senha</label>
-            <input type="password" name="senha">
+            <input type="password" name="senha" required>
             <button>Cadastrar</button>
         </div>
     </form>
+
 
 
  
