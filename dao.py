@@ -1,6 +1,6 @@
 
 import mysql.connector as banco
-<<<<<<< HEAD
+
 
 def realiza_login(email,senha):
     sql_select="select email from usuario where email =%s and senha=%s"
@@ -36,7 +36,7 @@ def insere_login_restaurante(nome,telefone,cnpj,cep,email,senha):
     cursor=conexao.cursor()
     cursor.execute(sql_insert,valores,)
     conexao.commit()
-=======
+
 import bcrypt
 import requests
  
@@ -94,10 +94,3 @@ class Upload:
 
         cursor.close()
         conexao.close()
-
-    
-
-
-
-
->>>>>>> b57b6ef421dc076890bb31c4c833ad400604460f
