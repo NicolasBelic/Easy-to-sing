@@ -1,47 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
-
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
     <link rel="stylesheet" href="/static/css/login.css">
     <link rel="icon" type="image/png" href="/static/img/logo-removebg-preview.png">
-
-
 </head>
 <body>
     <div id="form">
         <form method="post">
             <div class="logo_login">
-            <h2>Entrar</h2>
-                <img src="/static/img/logo-removebg-preview.png ">
+                <img src="/static/img/logo-removebg-preview.png">
+                <h2>Entrar</h2>
             </div>
-            <label for="email">Email</label>
-            <i class="fa-solid fa-envelope"></i>
-            <input type="text" placeholder="Digite deu email" name="email" id="email" >
-
-            <label for="senha">Senha</label>
-            <i class="fa-sharp fa-solid fa-lock"></i>
-            <input type="password" placeholder="Digite sua senha" name="senha" id="senha">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <i class="fas fa-envelope"></i>
+                <input type="text" class="form-control" placeholder="Digite seu email" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Digite sua senha" name="senha" id="senha">
+            </div>
             <div id="btn">
-            <button type="submit">entrar</button>
+                <button type="submit" class="btn btn-primary">Entrar</button>
             </div>
         </form>
         <div class="criar_conta">
             <form action="entra_criar_conta">
-                <p>ainda não tem uma conta?  <button> Criar Conta</button></p>
-                
+                <p>Ainda não tem uma conta? <button class="btn btn-secondary">Criar Conta</button></p>
             </form>
         </div>
-
     </div>
- 
-
     <script src="https://kit.fontawesome.com/d47de159c9.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
-
-
+    <title>Cadastro de Restaurante</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
-    <link rel="stylesheet" href="/static/css/login.css">
     <link rel="icon" type="image/png" href="/static/img/logo-removebg-preview.png">
-
-
-</head>
-<body>
-<div class="artista_log" id="form">
-    <form action="cadastrar_restaurante" method="post">
-            <label>Nome do Estabelecimento</label>
-            <input type="text" name="nome">
-            <br>
-            <label>Telefone</label>
-            <input type="text" name="telefone" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-            <br>
-            <label>CNPJ</label>
-            <input type="text" name="cnpj" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-            <br>
-            <label>CEP</label>
-            <input type="text" name="cep" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-            <br>
-            <label>Email</label>
-            <input type="text" name="email">
-            <br>
-            <label>Senha</label>
-            <input type="password" name="senha">
-            <button>Cadastrar</button>
-    </form>
-</div>
-
-
-
- 
-
-    <script src="https://kit.fontawesome.com/d47de159c9.js" crossorigin="anonymous"></script>
-</body>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-3">Cadastro de Restaurante</h2>
+      <form action="cadastrar_restaurante" method="post">
+        <div class="form-group">
+          <label for="nome">Nome do Estabelecimento:</label>
+          <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" class="form-control" id="telefone" name="telefone" pattern="[0-9]+" required>
+        </div>
+        <div class="form-group">
+          <label for="cnpj">CNPJ:</label>
+          <input type="text" class="form-control" id="cnpj" name="cnpj" pattern="[0-9]+" required>
+        </div>
+        <div class="form-group">
+          <label for="cep">CEP:</label>
+          <input type="text" class="form-control" id="cep" name="cep" pattern="[0-9]+" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" class="form-control" id="senha" name="senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+      </form>
+    </div>
+  </body>
 </html>

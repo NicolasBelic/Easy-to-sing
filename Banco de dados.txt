@@ -2,18 +2,33 @@ CREATE DATABASE easy_to_sing;
 
 USE easy_to_sing;
 
-CREATE TABLE usuario (
-  id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+CREATE TABLE artistas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
-  sexo VARCHAR(20),
-  telefone VARCHAR(11) NOT NULL,
+  sexo ENUM('Masculino', 'Feminino', 'Outro') DEFAULT 'Outro',
+  telefone VARCHAR(15) NOT NULL,
   cpf VARCHAR(15),
   cep VARCHAR(10),
   email VARCHAR(100) NOT NULL UNIQUE,
   senha VARCHAR(100) NOT NULL,
+  tipo ENUM('Cantor', 'Banda', 'Outro') DEFAULT 'Outro',
+  logradouro VARCHAR(500),
+  bairro VARCHAR(100),
+  localidade VARCHAR(500),
+  uf CHAR(2)
+);
+
+CREATE TABLE empreendimentos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  telefone VARCHAR(15) NOT NULL,
+  cnpj VARCHAR(20),
+  cep VARCHAR(10),
+  email VARCHAR(100),
+  senha VARCHAR(100),
+  tipo varchar (100),
   logradouro VARCHAR(500),
   bairro VARCHAR(100),
   localidade VARCHAR(100),
-  uf VARCHAR(3),
-  tipo varchar(50)
+  uf CHAR(2)
 );
